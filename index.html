@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Calculate the average stock price of your investments with this easy-to-use Average Stock Price Calculator. Perfect for investors and traders to track their portfolio performance."
+    />
+    <meta
+      name="keywords"
+      content="average stock price calculator, stock calculator, investment calculator, portfolio tracker, stock price tracker"
+    />
+    <meta name="author" content="Your Name" />
+    <meta property="og:title" content="Average Stock Price Calculator" />
+    <meta
+      property="og:description"
+      content="Calculate the average stock price of your investments with this easy-to-use tool. Perfect for investors and traders."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://spiritstack.github.io/Free-Average-Stock-Price-Calculator/"
+    />
+    <meta
+      property="og:image"
+      content="https://spiritstack.github.io/Free-Average-Stock-Price-Calculator/image.png"
+    />
+    <title>
+      Average Stock Price Calculator - Track Your Investments Easily
+    </title>
+    <!-- Pico.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <!-- Custom Styles -->
+    <style>
+      /* Custom styles for better UX */
+      .transactions-section ul {
+        list-style: none;
+        padding: 0;
+      }
+      .transactions-section li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+        border-bottom: 1px solid var(--muted-border-color);
+      }
+      .transactions-section li:last-child {
+        border-bottom: none;
+      }
+      .transactions-section button {
+        margin-left: 1rem;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+      }
+      .result-section h2 {
+        color: var(--primary);
+      }
+      .input-section .grid {
+        gap: 1rem;
+      }
+      .input-section button {
+        margin-top: 1rem;
+      }
+      .recommended-brokers .grid {
+        gap: 1rem;
+      }
+      .footer {
+        margin-top: 2rem;
+        text-align: center;
+      }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-S9BL9ZL20F"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-S9BL9ZL20F");
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Average Stock Price Calculator</h1>
+        <p>
+          Track your investments and calculate the average stock price of your
+          portfolio with this easy-to-use tool.
+        </p>
+      </header>
+      <main class="main">
+        <section class="result-section">
+          <h2>Average Stock Price: <span id="average-price">0.00</span></h2>
+        </section>
+        <section class="input-section">
+          <h2>Calculate Your Average Stock Price</h2>
+          <div class="grid">
+            <div>
+              <label for="quantity">Quantity:</label>
+              <input
+                type="number"
+                id="quantity"
+                placeholder="Quantity"
+                min="1"
+                autocomplete="off"
+              />
+            </div>
+            <div>
+              <label for="price">Price per share:</label>
+              <input
+                type="number"
+                id="price"
+                placeholder="Price per share"
+                min="0.01"
+                step="0.01"
+                autocomplete="off"
+              />
+            </div>
+          </div>
+          <button id="add-transaction">Add</button>
+          <button id="reset-transactions" class="secondary">Reset</button>
+        </section>
+        <section class="transactions-section">
+          <h2>Your Transactions</h2>
+          <ul id="transactions-list">
+            <li class="empty-state">No transactions added yet.</li>
+          </ul>
+        </section>
+        <section class="intro">
+          <h2>Why Use an Average Stock Price Calculator?</h2>
+          <p>
+            Calculating the average stock price is essential for investors to
+            understand their portfolio performance. Whether you're buying shares
+            at different prices or tracking your investments over time, this
+            tool helps you determine the average price you've paid per share.
+            It's perfect for both beginners and experienced traders.
+          </p>
+        </section>
+        <section class="faq">
+          <h2>Frequently Asked Questions</h2>
+          <details>
+            <summary>What is an average stock price?</summary>
+            <p>
+              The average stock price is the mean price you've paid for all the
+              shares of a particular stock in your portfolio. It helps you
+              understand your investment performance and make informed
+              decisions.
+            </p>
+          </details>
+          <details>
+            <summary>How is the average stock price calculated?</summary>
+            <p>
+              The average stock price is calculated by dividing the total cost
+              of all shares by the total number of shares purchased. This tool
+              automates the calculation for you.
+            </p>
+          </details>
+          <details>
+            <summary>Can I use this tool for multiple stocks?</summary>
+            <p>
+              Yes, you can use this tool to calculate the average price for
+              multiple stocks. Simply reset the calculator after calculating the
+              average for one stock and start over for the next.
+            </p>
+          </details>
+        </section>
+        <section class="recommended-brokers">
+          <h2>Best Trading Platforms to Start Investing</h2>
+          <p>
+            Sign up for Free Demat Account with these trusted platforms and get
+            exclusive benefits:
+          </p>
+          <div class="grid">
+            <a
+              href="https://zerodha.com/?c=CIH184&s=CONSOLE"
+              target="_blank"
+              role="button"
+              onclick="trackReferral('Zerodha')"
+              >🔥 Start Investing on Zerodha</a
+            >
+            <a
+              href="https://join.dhan.co/?invite=KGKPA50691"
+              target="_blank"
+              role="button"
+              class="secondary"
+              onclick="trackReferral('Dhan')"
+              >🚀 Open FREE Demat A/C with ₹0 AMC &amp; ₹0 Platform Fees on
+              Dhan</a
+            >
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <p>
+          &copy; <time id="year"></time> Average Stock Price Calculator. All
+          rights reserved.
+        </p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      document
+        .querySelectorAll("time")
+        .forEach((el) => (el.textContent = new Date().getFullYear()));
+
+      // Track button clicks
+      document
+        .getElementById("add-transaction")
+        .addEventListener("click", function () {
+          gtag("event", "calculate_clicked", {
+            event_category: "User Interaction",
+            event_label: "Calculate Button",
+          });
+        });
+
+      document
+        .getElementById("reset-transactions")
+        .addEventListener("click", function () {
+          gtag("event", "reset_clicked", {
+            event_category: "User Interaction",
+            event_label: "Reset Button",
+          });
+        });
+
+      // Track form inputs
+      document
+        .getElementById("quantity")
+        .addEventListener("change", function () {
+          gtag("event", "stock_quantity_entered", {
+            event_category: "Form Input",
+            event_label: "Stock Quantity Field",
+            value: this.value,
+          });
+        });
+
+      document.getElementById("price").addEventListener("change", function () {
+        gtag("event", "stock_price_entered", {
+          event_category: "Form Input",
+          event_label: "Stock Price Field",
+          value: this.value,
+        });
+      });
+
+      function trackReferral(brokerName) {
+        gtag("event", "referral_clicked", {
+          event_category: "Referral Links",
+          event_label: brokerName,
+        });
+      }
+    </script>
+  </body>
+</html>

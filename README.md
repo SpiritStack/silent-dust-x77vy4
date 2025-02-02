@@ -1,2 +1,2 @@
-# silent-dust-x77vy4
-Created with CodeSandbox
+# Free-Average-Stock-Price-Calculator
+Free Average Stock Price Calculator
